@@ -1,9 +1,9 @@
-let n = 5;
+let n = 10;
 let spaceStr = ' ';
 let str = spaceStr.repeat(n);
 
 
-for (let i = 1; i <= n; i++) {
-    str = str.substring(1, n) + '#';
+for (n; n > 0; n--) {
+    str = str.slice(1) + '#';
     console.log(str);
 }
