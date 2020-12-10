@@ -1,4 +1,4 @@
-let n = 7;
+let n = 5;
 
 let str1 = ' '.repeat(n);
 let str2 = '';
