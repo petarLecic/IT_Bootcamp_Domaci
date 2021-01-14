@@ -17,6 +17,7 @@ function createElement(obj) {
         removeBtn.addEventListener('click', () => {
             service.deleteById(obj.id);
             container.remove();
+            console.log(service.data);
         });
 
     container.append(checkbox, description, removeBtn);
@@ -33,6 +34,8 @@ let btnAdd = document.querySelector('#add');
             desc: inputDesc.value.trim(),
             done: false
         };
-        service.add(newItem);
+        let id = service.add(newItem);
+        newItem.id = id;
+        console.log(service.data);
         document.body.append(createElement(newItem));
     });

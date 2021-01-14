@@ -29,7 +29,9 @@ const data = [
 ];
 
 const add = item => {
-    data.push({id: count++, ...item});
+    let obj = {id: count++, ...item}
+    data.push(obj);
+    return obj.id;
 };
 
 const deleteById = id => {
