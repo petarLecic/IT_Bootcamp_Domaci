@@ -1,4 +1,4 @@
-const OperationBtn = ({ operation, input, setInput, setResult, setSteps }) => {
+const OperationBtn = ({ operation, input, setInput, setResult, setSteps }) => { 
     input = Number(input)
     
     return (
@@ -11,7 +11,7 @@ const OperationBtn = ({ operation, input, setInput, setResult, setSteps }) => {
                     case '/': setResult(prev => Number(prev) / input); break;
                     default: setResult(0); break;
                 }
-                operation === 'Clear' ? setSteps(0) : setSteps(prev => prev +  operation + input) // Ako je poslednja operacija + ili - staviti zagrade na oko prev
+                operation === 'Clear' ? setSteps(0) : setSteps(prev => prev +  operation + input)
                 setInput('')
             }}
             >{operation}
